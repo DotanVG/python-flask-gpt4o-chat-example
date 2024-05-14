@@ -81,7 +81,7 @@ def register():
     form = RegistrationForm()
     if form.validate_on_submit():
         username = form.username.data
-        password = generate_password_hash(form.password.data, method='sha256')
+        password = generate_password_hash(form.password.data, method='pbkdf2:sha256')
         user = User(username=username, password=password)
         db.session.add(user)
         db.session.commit()
