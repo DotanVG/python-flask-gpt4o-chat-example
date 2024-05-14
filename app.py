@@ -134,7 +134,7 @@ def chat():
     user_message = request.json.get('message')
     logging.info(f"User message: {user_message}")
     try:
-        response = openai.ChatCompletion.create(
+        response = openai.Completion.create(
             model="gpt-4-turbo",
             messages=[
                 {"role": "system", "content": "You are a helpful assistant."},
