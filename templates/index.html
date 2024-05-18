@@ -48,6 +48,10 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+        }
         button {
             padding: 10px;
             border: none;
@@ -55,9 +59,13 @@
             color: white;
             cursor: pointer;
             border-radius: 5px;
+            margin-top: 10px;
         }
         button:hover {
             background-color: #0056b3;
+        }
+        form {
+            display: inline;
         }
     </style>
 </head>
@@ -65,11 +73,13 @@
     <div id="chatbox">
         <div id="messages"></div>
         <input type="text" id="user-input" placeholder="Type a message..."/>
-        <button onclick="sendMessage()">Send</button>
-        <form method="POST" action="/logout">
-            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-            <button type="submit">Logout</button>
-        </form>
+        <div class="button-container">
+            <button onclick="sendMessage()">Send</button>
+            <form method="POST" action="/logout">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <button type="submit">Logout</button>
+            </form>
+        </div>
     </div>
 
     <script>
