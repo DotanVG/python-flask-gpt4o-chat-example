@@ -15,6 +15,8 @@ Welcome to the GPT-4 Turbo Chat Example repository! This project showcases a sim
 
 This project demonstrates how to create a chat application using Flask and OpenAI's GPT-4 Turbo model. The application allows users to register, log in, and send messages to the chatbot, which responds using the GPT-4 Turbo model.
 
+![Chat Screenshot](https://i.ibb.co/SxH101C/Screenshot-2024-05-15-123308.png)
+
 ## ✨ Features
 
 - User registration and login
